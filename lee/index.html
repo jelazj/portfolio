@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lee Brand Store</title>
+	<style type="text/css">
+		* {box-sizing: border-box;}
+		.lpContainer {width: 764px; margin: auto; font-family: Arial;}
+		.banner { width: 764px; height: 200px; margin: 0px 0px 10px 0px;  background: url('lee-product-4thway.jpg') no-repeat; }
+		/*Navigation*/
+		.lpContainer ul.tabs { width: 764px; list-style-type: none; margin: 0; padding: 0;}
+		.lpContainer ul.tabs li { float: left; margin: 0; padding: 0; width: 254px; height: 40px; }
+		.lpContainer ul.tabs li a { width: 254px; height: 40px; clear: both; padding: 0px; text-align: center; display: block; font-size: 14px; text-decoration: none; font-weight: bold; color: #333; border-bottom: 2px solid #333; line-height: 36px;}
+		.lpContainer ul.tabs li a:hover, .lpContainer ul.tabs li a.active  { background-color: #ececec; }
+
+		#item-2, #item-3 {display: none;}
+
+/*		Tab 1 styles*/
+		#item-1 .womens { width: 764px; height: 420px; position: relative; margin-top: 10px; float: left;}
+
+		#item-1 .shop-women {width: 764px; height: 420px;  background: url('category-women.jpg') no-repeat; float: left;  display: block;}
+		#item-1 .shop-women:hover { opacity: 0.7; }
+		#item-1 .shop-women-cta { background: #fff; position: absolute; background: url('shop-all-womens.jpg') no-repeat; width: 160px; height: 30px; bottom: 40px; left: 290px; }
+		#item-1 .shop-women-cta:hover { background-position: 0 -30px; }
+
+		#item-1 .mens { width: 764px; height: 400px; position: relative; margin-top: 10px; float: left;}
+
+		#item-1 .shop-mens {width: 764px; height: 400px;  background: url('mens-header.jpg') no-repeat; float: left;  display: block;}
+		#item-1 .shop-mens:hover { opacity: 0.7; }
+		#item-1 .shop-mens-cta { background: #fff; position: absolute; background: url('shop-all-mens.jpg') no-repeat; width: 160px; height: 30px; bottom: 20px; left: 290px; }
+		#item-1 .shop-mens-cta:hover { background-position: 0 -30px; }
+		#item-1 .shop-all-lee { width: 764px; height: 40px; background: url(shop-all-lee.jpg) no-repeat; display: block; float: left; margin-top: 10px;}
+		#item-1 .shop-all-lee:hover { background-position: 0 -40px; }
+		.empty { width: 764px; height: 200px; float: left; }
+		/*end of tab 1*/
+
+/*		tab 2 styles*/
+		#item-2 .header { width: 764px; height: 160px; background: url(header-copy.jpg) no-repeat; float: left; }
+		#item-2 .fit-guide { width: 764px; height: 400px; background: url(womens-header.jpg) no-repeat; position: relative; float: left; }
+
+		/*list styles*/
+		#item-2 .list { width: 764px; height: 440px; margin: 10px 0; float: left;}
+		#item-2 .list ul { list-style: none; margin: 0; padding: 0; display: block; float: left; width: 424px; }
+		#item-2 .list ul li { width: 424px; height: 110px; padding: 0; margin: 0; }
+		#item-2 .list ul li a { width: 424px; height: 110px; display: block; }
+		#item-2 .list ul li a.menu-1 { background: url('let-me-be-your-ex.jpg') no-repeat; background-position: 0 -110px; }
+		#item-2  .list ul li a.menu-1.active { background-position: 0px 0px; }
+		#item-2 .list ul li a.menu-2 { background: url('mind-the-zips.jpg') no-repeat; background-position: 0 -110px; }
+		#item-2  .list ul li a.menu-2.active { background-position: 0px 0px; }
+		#item-2 .list ul li a.menu-3 { background: url('boot-your-cut.jpg') no-repeat; background-position: 0 -110px; }
+		#item-2  .list ul li a.menu-3.active { background-position: 0px 0px; }
+		#item-2 .list ul li a.menu-4 { background: url('overall-after-all.jpg') no-repeat; background-position: 0 -110px; }
+		#item-2  .list ul li a.menu-4.active { background-position: 0px 0px; }
+
+		#item-2 .list .item-container { width: 330px; height: 440px;  float: left; margin-left: 10px; position: relative;}
+		#item-2 .list .item-container .bcg { width: 330px; height: 440px; position: absolute; }
+		#item-2 .list .item-container .bcg-1 { display: block !important; background: url('let-me-be-your-ex-image.jpg') no-repeat; }
+		#item-2 .list .item-container .bcg-2 { background: url('mind-the-zips-image.jpg') no-repeat; display: none; }
+		#item-2 .list .item-container .bcg-3 { background: url('boot-your-cut-image.jpg') no-repeat; display: none; }
+		#item-2 .list .item-container .bcg-4 { background: url('overall-after-all-image.jpg') no-repeat; display: none; }
+
+
+		/*bottom styles*/
+		#item-2 .bottom-1 {width: 424px; height: 330px; background: url('women-1.jpg') no-repeat; display: block; float: left; margin-right: 10px;}
+		#item-2 .bottom-2 {width: 330px; height: 330px; background: url('women-2.jpg') no-repeat; display: block; float: left;}
+		#item-2 .shop-all-womens-lee {width: 764px; height: 40px; background: url('shop-womens-lee.jpg') no-repeat; display: block; float: left; margin-top: 10px;}
+		#item-2 .shop-all-womens-lee:hover { background-position: 0px -40px;}
+
+		/*end of tab 2*/
+
+		/*tab 3 styles*/
+
+		#item-3 .header { width: 764px; height: 160px; background: url(header-copy-men.jpg) no-repeat; float: left; }
+		#item-3 .fit-guide { width: 764px; height: 400px; background: url(mens-header.jpg) no-repeat; position: relative; float: left; }
+
+		/*list styles*/
+		#item-3 .list { width: 764px; height: 440px; margin: 10px 0; float: left;}
+		#item-3 .list ul { list-style: none; margin: 0; padding: 0; display: block; float: left; width: 424px; }
+		#item-3 .list ul li { width: 424px; height: 110px; padding: 0; margin: 0; }
+		#item-3 .list ul li a { width: 424px; height: 110px; display: block; }
+		#item-3 .list ul li a.menu-1 { background: url('most-wanted-cut.jpg') no-repeat; background-position: 0 -110px; }
+		#item-3  .list ul li a.menu-1.active { background-position: 0px 0px; }
+		#item-3 .list ul li a.menu-2 { background: url('the-tapereds.jpg') no-repeat; background-position: 0 -110px; }
+		#item-3  .list ul li a.menu-2.active { background-position: 0px 0px; }
+		#item-3 .list ul li a.menu-3 { background: url('watch-your-back.jpg') no-repeat; background-position: 0 -110px; }
+		#item-3  .list ul li a.menu-3.active { background-position: 0px 0px; }
+		#item-3 .list ul li a.menu-4 { background: url('the-skinnies.jpg') no-repeat; background-position: 0 -110px; }
+		#item-3  .list ul li a.menu-4.active { background-position: 0px 0px; }
+
+		#item-3 .list .item-container { width: 330px; height: 440px;  float: left; margin-left: 10px; position: relative;}
+		#item-3 .list .item-container .bcg { width: 330px; height: 440px; position: absolute; }
+		#item-3 .list .item-container .bcg-1 { display: block !important; background: url('most-wanted-cut-image.jpg') no-repeat; }
+		#item-3 .list .item-container .bcg-2 { background: url('the-tapereds-image.jpg') no-repeat; display: none; }
+		#item-3 .list .item-container .bcg-3 { background: url('watch-your-back-image.jpg') no-repeat; display: none; }
+		#item-3 .list .item-container .bcg-4 { background: url('the-skinnies-image.jpg') no-repeat; display: none; }
+
+
+		/*bottom styles*/
+		#item-3 .bottom-1 {width: 424px; height: 330px; background: url('men-1.jpg') no-repeat; display: block; float: left; margin-right: 10px;}
+		#item-3 .bottom-2 {width: 330px; height: 330px; background: url('men-2.jpg') no-repeat; display: block; float: left;}
+		#item-3 .shop-all-mens-lee {width: 764px; height: 40px; background: url('shop-mens-lee.jpg') no-repeat; display: block; float: left; margin-top: 10px;}
+		#item-3 .shop-all-mens-lee:hover { background-position: 0px -40px;}
+
+		/*end of tab 3*/
+		
+
+	</style> 
+
+
+
+</head>
+<body>
+	<div class="lpContainer">
+		<div class="banner"></div>
+		<ul class="tabs">
+			<li><a href="#item-1" class="active products">SHOP BY CATHEGORY</a></li>
+			<li><a href="#item-2" class="lp-page">WOMENS COLLECTION</a></li>
+			<li><a href="#item-3" class="lp-page">MENS COLLECTION</a></li>
+		
+		</ul>
+		<div class="container">
+			<!-- tab-1 -->
+			<div id="item-1" class="bcg bcg-1">
+				<div class="womens">
+					<a class="shop-women" href="#"></a>
+					<a class="shop-women-cta" href="#"></a>
+				</div>
+				<div class="mens">
+					<a class="shop-mens" href="#"></a>
+					<a class="shop-mens-cta" href="#"></a>
+				</div>
+				<a class="shop-all-lee" href="#" ></a>
+				<div class="empty"></div>
+
+			</div>
+			<!-- tab-2 -->
+			<div id="item-2" class="bcg bcg-2">
+				<div class="header"></div>
+				<div class="fit-guide"></div>
+				<div class="list">
+					<ul>
+						<li>
+							<a href="#w-item-1" class="menu-1 active" ></a>
+						</li>
+						<li>
+							<a href="#w-item-2" class="menu-2" ></a>
+						</li>
+						<li>
+							<a href="#w-item-3" class="menu-3" ></a>
+						</li>
+						<li>
+							<a href="#w-item-4" class="menu-4"></a>
+						</li>
+					</ul>
+					<div class="item-container">
+						<div id="w-item-1" class="bcg bcg-1" style="display: none;">
+						</div>
+						<div id="w-item-2" class="bcg bcg-2" style="display: none;">
+	
+						</div>
+						<div id="w-item-3" class="bcg bcg-3" style="display: block;">
+					
+						</div>
+						<div id="w-item-4" class="bcg bcg-4">
+						
+						</div>
+					</div>
+				</div>
+				<div class="bottom-1"></div>
+				<div class="bottom-2"></div>
+				<a href="#" class="shop-all-womens-lee"></a>
+				<div class="empty"></div>
+				
+			</div>
+			<!-- tab-3 -->
+			<div id="item-3" class="bcg bcg-3">
+				<div class="header"></div>
+				<div class="fit-guide"></div>
+				<div class="list">
+					<ul>
+						<li>
+							<a href="#m-item-1" class="menu-1 active" ></a>
+						</li>
+						<li>
+							<a href="#m-item-2" class="menu-2" ></a>
+						</li>
+						<li>
+							<a href="#m-item-3" class="menu-3" ></a>
+						</li>
+						<li>
+							<a href="#m-item-4" class="menu-4"></a>
+						</li>
+					</ul>
+					<div class="item-container">
+						<div id="m-item-1" class="bcg bcg-1" style="display: none;">
+						</div>
+						<div id="m-item-2" class="bcg bcg-2" style="display: none;">
+	
+						</div>
+						<div id="m-item-3" class="bcg bcg-3" style="display: block;">
+					
+						</div>
+						<div id="m-item-4" class="bcg bcg-4">
+						
+						</div>
+					</div>
+				</div>
+				<div class="bottom-1"></div>
+				<div class="bottom-2"></div>
+				<a href="#" class="shop-all-mens-lee"></a>
+				<div class="empty"></div>
+
+		
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+<!-- Content Template - 4thway New Slider - JS (All Brands) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+	(function  ($) {
+
+		$('.lpContainer ul.tabs li a').on('click', function(){
+			$('.container .bcg').hide();
+			$($(this).attr('href')).show();
+			$('.lpContainer ul.tabs li a').removeClass('active');
+			$(this).addClass('active');
+			return false;
+
+
+		});
+	}(jQuery));
+
+</script>
+
+<script type="text/javascript">
+(function ($) {
+$('div.list ul li a').on('click', function(){
+$('div.item-container .bcg').fadeOut(1000);
+$($(this).attr('href')).fadeIn(1000);
+$('div.list ul li a').removeClass('active');
+$(this).addClass('active');
+return false;	
+});
+}(jQuery));
+</script>
+
+
+</body>
+</html>

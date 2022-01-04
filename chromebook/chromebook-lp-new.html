@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Roboto' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+
+		#lpContainer { width: 764px; margin: auto; }
+
+		.banner { width: 764px; height: 200px; margin: 0px 0px 10px 0px; position: relative; background: url('chromebook-4thway.jpg') no-repeat; }
+		/*tabs style*/
+		#lpContainer ul.tabs { width: 764px; list-style-type: none; margin: 0; padding: 0;}
+		#lpContainer ul.tabs li { float: left; margin: 0; padding: 0; }
+		#lpContainer ul.tabs li a { width: 380px; height: 32px; display: block; padding: 0px; background-image: url('menu-sprite.png');}
+		#lpContainer ul.tabs li a.products { background-position: 0px -8px; }
+		#lpContainer ul.tabs li a.lp-page { margin-left: 4px; background-position: 382px -8px;}
+
+		#lpContainer ul.tabs li a.products:hover, #lpContainer ul li a.products.active  {background-position: 0px 40px; }
+		
+		#lpContainer ul.tabs li a.lp-page:hover, #lpContainer ul li a.lp-page.active { background-position: 382px 40px; }
+
+	
+		#item-2 {display: none;}
+
+
+		#item-2>div {display: block; float: left;}
+		#item-2 h2 { font-family: Open Sans; font-size: 20px; color: #525256; font-weight: 300; text-align: center; position: absolute; margin: 0px;}
+		#item-2 .copy {font-family: Open Sans; font-size: 14px; color: #525256; font-weight: 300; position: absolute; line-height: 20px;}
+		#item-2 .section-1 { width:764px; height: 416px; background: url('chromebook-section1.jpg') no-repeat; position: relative; }
+
+
+		.section-1 { width:764px; height: 416px; background: url('chromebook-section1.jpg') no-repeat; position: relative; }
+		#item-2 .section-1 h2 {top: 120px; left: 40px;}
+		#item-2 .section-1 .copy {width: 350px; top:150px; left: 40px;}
+		#item-2 .section-2 { width:764px; height: 450px; background: url('chromebook-section2.jpg') no-repeat; position: relative; }
+		#item-2 .section-2 h2 {top: 100px; left: 365px; background: url('chromebook-section2.jpg') no-repeat;}
+		#item-2 .section-2 .copy {width: 360px; top:127px; left: 365px;}
+		#item-2 .section-3 { width:764px; height: 381px; background: url('chromebook-section3.jpg') no-repeat; position: relative; }
+		#item-2 .section-3 h2 {top: 72px; left: 40px;}
+		#item-2 .section-3 .copy {width: 300px; top:100px; left: 40px;}
+
+
+		/*tab content*/
+	#item-2 .section-4 {width: 764px; height: 476px; position: relative; background-color: #CFD9DB;}
+	#item-2 .section-4 .banner{ width: 764px; height: 476px; position: absolute; display: none;}
+	#item-2 .section-4 .banner-01 {background-image: url('chromebook-section4-playmusic.jpg');}
+	#item-2 .section-4 .banner-02 {background-image: url('chromebook-section4-watchfilms.jpg'); }
+	#item-2 .section-4 .banner-03 {background-image: url('chromebook-section4-voicesearch.jpg'); }
+	#item-2 .section-4 .banner-04 {background-image: url('chromebook-section4-stayintouch.jpg'); }
+	#item-2 .section-4 .banner-05 {background-image: url('chromebook-section4-getthingsdone.jpg'); }
+	#item-2 .section-4 h2 {top: 50px; left: 250px; z-index: 100;}
+	#item-2 .section-4 p { width: 260px; font-family: Roboto; font-size: 10px; font-weight: 400; line-height: 15px; display: none; }
+	#item-2 .section-4 li.selected p { display: block; }
+	#item-2 .section-4-list {position: absolute; width: 260px; top: 136px; right: 80px; }
+	#item-2 .section-4 ul {list-style-type: none; position: absolute; top: 120px; right: 80px; z-index: 100;}
+	#item-2 .section-4 li {font-family: Roboto; font-size: 13px; font-weight: 400; left: 420px; width: 260px; padding: 10px 5px; margin:0px 10px 0px 0px; color: #525256; border-top: 1px solid #C1C1C2;}
+	#item-2 .section-4 li a { width: 100%; display: block; background: url('chromebook-section4-plus-element.jpg') no-repeat center right; color: #525256; text-decoration: none; }
+	#item-2 .section-4 li.selected a { background: none;}
+	#item-2 .section-4 #last-line {border-bottom: 1px solid #C1C1C2; }
+	#item-2 .section-4 img {display: block; float: right; margin-left: 10px;}
+	/*end of styles of section 4*/
+
+	#item-2 .section-5 { width:764px; height: 248px; background: url('shop.jpg') no-repeat; position: relative; }
+	#item-2 .section-5 .cta { width: 310px; height: 40px; position: absolute; left: 236px; bottom: 63px;}
+		
+		
+
+		
+	</style>
+</head>
+<body>
+
+<div id="lpContainer">
+	<!-- banner -->
+	<div class="banner"></div>
+
+	<!-- tabs -->
+	<ul class="tabs">
+		<li><a href="#item-1" class="active products"></a></li>
+		<li><a href="#item-2" class="lp-page"></a></li>
+		
+	</ul>
+
+	<!-- content -->
+
+	<div class="container">
+		<!-- tab-1 -->
+		<div id="item-1" class="bcg bcg-1">
+		product
+		</div>
+		<!-- tab 2 -->
+		<div id="item-2" class="bcg bcg-2">
+			<div class="section-1">
+				<h2>A new type of computer from Google</h2>
+				<p class="copy">
+	A new type of computer for everything you love to do. It&#146;s easy to use, has virus protection built-in, and keeps going with a long-life battery, so you can, too. It boots in seconds, and comes with your favourite Google apps, perfect for everyday use and sharing with others.
+				</p>
+			</div>
+			<div class="section-2">
+				<h2>With loads built-in</h2>
+				<p class="copy">
+	No need for expensive software, no annoying updates. Chromebooks are automatically kept up to date, so you&#146;ll have the latest virus protection. Plus your favourite apps for word processing, listening to muic, watching videos and playing games are built-in and just a click away.
+				</p>
+			</div>
+			<div class="section-3">
+				<h2>Offline. Online. All day</h2>
+				<p class="copy">
+	Chromebooks are light, portable and have up to 13 hours battery life. They are made for the web, but they also work offline, so you can keep getting stuff done with apps like Gmail and Google Docs with or without WiFi.
+				</p>
+			</div>
+			<div class="section-4">
+			<h2>Do more with Chromebooks</h2>
+			<ul id="section-4-list">
+				<li class="selected"><a href="#cb-banner-01" data-value="music">Play Music</a>
+				<p>
+Enjoy unlimited listening of over 30 million songs, curated radio stations, customised to any moment or mood, and playlists based on the artists, songs and genres you love on Google Play Music. Plus, upload up to 50,000 of your own songs to listen to anytime, anywhere.
+				</p>
+				</li>
+				<li><a href="#cb-banner-02" data-value="film">Watch Films</a>
+					<p>
+Add the Netflix or Google Play Movies & TV apps to get your favourite TV shows and movies. Or produce your own with apps like WeVideo.
+					</p>
+				</li>
+				<li><a href="#cb-banner-03" data-value="search">Voice Search</a>
+					<p>
+From knowing the weather before you start your day, to planning the best route to avoid traffic, or even checking your favorite team&#146;s score, use Voice Search and Google Now Cards to bring you the information you want, when you need it with Voice Search and Google Now cards.
+					</p>
+				</li>
+				<li><a href="#cb-banner-04" data-value="touch">Stay In Touch</a>
+					<p>
+Video chat, text and call friends and colleagues using Hangouts. Seamlessly continue conversations across devices, so you always stay in the loop.
+					</p>
+				</li>
+				<li id="last-line"><a href="#cb-banner-05" data-value="done">Get Things Done</a>
+					<p>
+Create and collaborate on documents, presentations and and spreadsheets with free tools like Google Docs, Slides and Sheets. Open, edit and share Word and Excel files using the free, built-in editor.
+					</p>
+				</li>
+			</ul>
+			<div id="cb-banner-01" class="banner banner-01" style="display: block;">
+			</div>
+			<div id="cb-banner-02" class="banner banner-02">
+			</div>
+			<div id="cb-banner-03" class="banner banner-03">
+			</div>
+			<div id="cb-banner-04" class="banner banner-04">
+			</div>
+			<div id="cb-banner-05" class="banner banner-05">
+			</div>
+		</div>
+<!-- end of section 4 tab -->
+		<div class="section-5">
+			<a class="cta" href="/electricals/laptops/chromebooks/e/b/116395,4873.end" manual_cm_re="PROMOBANNER-_-BANNER-_-Chromebook+Shop+The+Range"></a>
+		</div>
+		</div>	
+	</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+	(function  ($) {
+
+		$('div#lpContainer ul.tabs li a').on('click', function(){
+			$('div.container .bcg').hide();
+			$($(this).attr('href')).show();
+			$('div#lpContainer ul.tabs li a').removeClass('active');
+			$(this).addClass('active');
+			return false;
+
+
+		});
+	}(jQuery));
+
+</script>
+
+
+<script type="text/javascript">
+var $current = 'music';
+var $selection;
+
+(function ($) {	
+$('div.section-4 li a').on('click', function () {
+$selection = $(this).attr('data-value');
+if ($selection != $current) {
+$('div.section-4 .banner').hide(1000)
+$($(this).attr('href')).fadeIn();
+$('div.section-4 ul li').removeClass('selected');
+$(this).parent().addClass('selected');
+$current = $(this).attr('data-value');
+return false;
+
+
+}
+else {
+
+}
+});
+}(jQuery));
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<script>
+  jQuery(document).ready(function($) {
+  $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+    e.preventDefault();
+    var target = this.hash,
+        $target = $(target);
+
+    $('html, body').stop().animate( {
+      'scrollTop': $target.offset().top-40
+    }, 900, 'swing', function () {
+      window.location.hash = target;
+    } );
+  } );
+} );
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<ul role="tablist">
+  <li class="active" id="p1"><a href="#pane1" role="tab">Section 1</a></li>
+  <li id="p2"><a href="#pane2" role="tab">Section 2</a></li>
+  <li id="p3"><a href="#pane3" role="tab">Section 3</a></li>
+</ul>
+
+<div id="pane1"></div>
+<div id="pane2"></div>
+<div id="pane3"></div>
